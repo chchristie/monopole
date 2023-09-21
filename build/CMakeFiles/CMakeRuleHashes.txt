@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+82b13ae4d2c120be205702490ba4d6be Monopole_wrap.cxx
