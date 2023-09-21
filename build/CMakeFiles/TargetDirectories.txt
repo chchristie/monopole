@@ -1,7 +1,0 @@
-/home/chchristie/.virtualenvs/crpropa/CRPropa3/Monopole/build/CMakeFiles/Monopole.dir
-/home/chchristie/.virtualenvs/crpropa/CRPropa3/Monopole/build/CMakeFiles/edit_cache.dir
-/home/chchristie/.virtualenvs/crpropa/CRPropa3/Monopole/build/CMakeFiles/rebuild_cache.dir
-/home/chchristie/.virtualenvs/crpropa/CRPropa3/Monopole/build/CMakeFiles/list_install_components.dir
-/home/chchristie/.virtualenvs/crpropa/CRPropa3/Monopole/build/CMakeFiles/install.dir
-/home/chchristie/.virtualenvs/crpropa/CRPropa3/Monopole/build/CMakeFiles/install/local.dir
-/home/chchristie/.virtualenvs/crpropa/CRPropa3/Monopole/build/CMakeFiles/install/strip.dir

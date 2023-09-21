@@ -1,2 +1,0 @@
-/home/chchristie/.virtualenvs/crpropa/lib/python3.10/site-packages/Monopole/Monopole.py
-/home/chchristie/.virtualenvs/crpropa/lib/python3.10/site-packages/Monopole/_Monopole.so
