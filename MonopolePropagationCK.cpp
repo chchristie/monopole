@@ -75,6 +75,10 @@ MonopolePropagationCK::MonopolePropagationCK(ref_ptr<MagneticField> field, doubl
 }
 
 void MonopolePropagationCK::Mprocess(MCandidate *candidate, MParticleState &current) const {
+	//save the new previous particle state
+	candidate->previous = current;
+	candidate->Mprevious = current;
+
 	Y yIn(current.getPosition(), current.getMomentum());
 	double step = maxStep;
 

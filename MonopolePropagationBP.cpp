@@ -78,6 +78,10 @@ namespace crpropa {
 
 
 	void MonopolePropagationBP::Mprocess(MCandidate *candidate, MParticleState &current) const {
+		//save the new previous particle state
+		candidate->previous = current;
+		candidate->Mprevious = current;
+	
 		Y yIn(current.getPosition(), current.getDirection());
 
 		// calculate magnetic charge of particle

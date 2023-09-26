@@ -229,21 +229,17 @@ void MonopoleSimulationModule::process(Candidate* c) const {
 	
 	//Downconvert
 	MCandidate *candidate = MCandidate::convertToMCandidate(c);
-	MParticleState &current = candidate->Mcurrent;
+	MParticleState &Mcurrent = candidate->Mcurrent;
 	
 	//Copy current to Mcurrent
-	current.setEnergy(candidate -> current.getEnergy());
-	current.setDirection(candidate ->current.getDirection());
-	
-	// save the new previous particle state
-	candidate->previous = current;
-	candidate->Mprevious = current;
+	Mcurrent.setEnergy(candidate -> current.getEnergy());
+	Mcurrent.setDirection(candidate ->current.getDirection());
 	
 	//Call the virtual function for normal processing
-	Mprocess(candidate, current);
+	Mprocess(candidate, Mcurrent);
 	
 	//Copy Mcurrent to current
-	candidate -> current = current;
+	candidate -> current = Mcurrent;
 }
 
 } // namespace crpropa
