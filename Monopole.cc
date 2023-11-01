@@ -223,9 +223,9 @@ MonopoleSimulationModule
 */
 void MonopoleSimulationModule::process(Candidate* c) const {
 	//Safetycheck before Downconvert
-	//if (!isDyon(candidate_base->current.getId())) {
-	//	return;
-	//}
+	/*if (!isDyon(c->current.getId())) {
+		return;
+	}*/
 	
 	//Downconvert
 	MCandidate *candidate = MCandidate::convertToMCandidate(c);

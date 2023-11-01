@@ -47,7 +47,8 @@ add_library(${PLUGINNAME} MODULE
   ${CMAKE_CURRENT_SOURCE_DIR}/${PLUGINNAME}.cc
   ${CMAKE_CURRENT_SOURCE_DIR}/MonopolePropagationBP.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/MonopolePropagationCK.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/MonopoleRadiation.cpp)
+  ${CMAKE_CURRENT_SOURCE_DIR}/MonopoleRadiation.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/MonopoleOutput.cpp)
 
 target_link_libraries(${PLUGINNAME} ${CRPROPA_LIB} ${PYTHON_LIBRARIES})
 

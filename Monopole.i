@@ -13,6 +13,7 @@
 #include "MonopolePropagationBP.h"
 #include "MonopolePropagationCK.h"
 #include "MonopoleRadiation.h"
+#include "MonopoleOutput.h"
 %}
 
 /* import crpropa in wrapper */
@@ -23,6 +24,7 @@
 %include "MonopolePropagationBP.h"
 %include "MonopolePropagationCK.h"
 %include "MonopoleRadiation.h"
+%include "MonopoleOutput.h"
 
 
 
