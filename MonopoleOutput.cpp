@@ -19,6 +19,7 @@
 
 namespace crpropa {
 
+// MonopoleOutput --------------------------------------------------------
 MonopoleOutput::MonopoleOutput(const std::string &filename) : outfile(filename.c_str(),
 				std::ios::binary), out(&outfile), filename(
 				filename), count(0), idx(0), lengthScale(kpc), energyScale(EeV) {
@@ -155,6 +156,35 @@ void MonopoleOutput::close() {
 
 MonopoleOutput::~MonopoleOutput() {
 	close();
+}
+
+// ObserverEnergy --------------------------------------------------------
+ObserverEnergy::ObserverEnergy(double energyThreshold, double distanceThreshold = 1*kpc) : energyThreshold(energyThreshold), distanceThreshold(distanceThreshold) { }
+
+DetectionState ObserverEnergy::checkDetection(Candidate *candidate) const
+{
+		double currentDistance = candidate -> getTrajectoryLength();
+		double previousEnergy = candidate -> previous.getEnergy();
+		double currentEnergy =  candidate -> current.getEnergy();
+
+		if ((currentDistance > distanceThreshold) & (currentEnergy < energyThreshold) & (currentEnergy < previousEnergy))
+			return DETECTED;
+		else
+			return NOTHING;
+}
+
+void ObserverEnergy::setEnergyThreshold(double newEnergyThreshold) {
+	energyThreshold = newEnergyThreshold;
+}
+
+void ObserverEnergy::setDistanceThreshold(double newDistanceThreshold) {
+	distanceThreshold = newDistanceThreshold;
+}
+
+std::string ObserverEnergy::getDescription() const {
+	std::stringstream ss;
+	ss << "ObserverEnergy: " << energyThreshold / EeV << " EeV, " << distanceThreshold / kpc << " kpc";
+	return ss.str();
 }
 
 } // namespace crpropa

@@ -3,6 +3,7 @@
 
 #include "crpropa/module/ParticleCollector.h"
 #include "Monopole.h"
+#include "crpropa/module/Observer.h"
 
 #include <fstream>
 
@@ -46,6 +47,26 @@ public:
 	void close();
 };
 /** @}*/
+
+
+/**
+ @class ObserverEnergy
+ @brief Detects particles below a certain energy
+ */
+class ObserverEnergy: public ObserverFeature {
+private:
+	double energyThreshold;
+	double distanceThreshold;
+public:
+	/** Constructor
+	 @param energyTheshold
+	*/
+	ObserverEnergy(double energyThreshold, double distanceThreshold);
+	DetectionState checkDetection(Candidate *candidate) const;
+	void setEnergyThreshold(double newEnergyThreshold);
+	void setDistanceThreshold(double newDistanceThreshold);
+	std::string getDescription() const;
+};
 
 } // namespace crpropa
 
