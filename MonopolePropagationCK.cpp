@@ -148,7 +148,7 @@ ref_ptr<MagneticField> MonopolePropagationCK::getField() const {
 }
 
 Vector3d MonopolePropagationCK::getFieldAtPosition(Vector3d pos, double z) const {
-	Vector3d B(0, 0, 0);
+	Vector3d B(1, 1, 1);
 	try {
 		// check if field is valid and use the field vector at the
 		// position pos with the redshift z
@@ -157,7 +157,7 @@ Vector3d MonopolePropagationCK::getFieldAtPosition(Vector3d pos, double z) const
 	} catch (std::exception &e) {
 		KISS_LOG_ERROR 	<< "MonopolePropagationCK: Exception in MonopolePropagationCK::getFieldAtPosition.\n"
 				<< e.what();
-	}	
+	}
 	return B;
 }
 
