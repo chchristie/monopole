@@ -1,5 +1,5 @@
-#ifndef MONOPOLE_OUTPUT_H
-#define MONOPOLE_OUTPUT_H
+#ifndef MONOPOLE_OUTPUTS_H
+#define MONOPOLE_OUTPUTS_H
 
 #include "crpropa/module/ParticleCollector.h"
 #include "Monopole.h"
@@ -70,4 +70,4 @@ public:
 
 } // namespace crpropa
 
-#endif // MONOPOLE_OUTPUT_H
+#endif // MONOPOLE_OUTPUTS_H

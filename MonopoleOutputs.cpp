@@ -1,4 +1,4 @@
-#include "MonopoleOutput.h"
+#include "MonopoleOutputs.h"
 #include "crpropa/Units.h"
 #include "crpropa/Version.h"
 #include "crpropa/Random.h"
